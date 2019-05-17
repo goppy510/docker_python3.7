@@ -7,4 +7,4 @@ services:
     container_name: python3.7.0-ubuntu
     tty: true
     volumes:
-      - ./src:/usr/local/Python/
+      - ./src:/usr/local/python/
