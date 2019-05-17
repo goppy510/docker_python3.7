@@ -34,17 +34,26 @@ $ sudo docker-compose build
 $ sudo /usr/local/bin/docker-compose up -d
 ```
 
-### 5. confrim python version
+## How to use
 
-#### 5.1 enter the docker
+### example: confirm python version
 
-```
-$ sudo docker exec -it python3.7.0-ubuntu /bin/bash
-```
-
-#### 5.2 confirm python version
+please omit python command
 
 ```
-# python --version
-Python 3.7.0
+$ sudo sh run.sh --version
+```
+
+### example: display "hello"
+
+example source path
+
+```
+src/test.py
+```
+
+execute scripte
+
+```
+$ sudo sh run.sh src/test.py
 ```
