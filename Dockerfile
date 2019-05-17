@@ -37,6 +37,7 @@ RUN ./configure --enable-optimizations \
     && ln -s /usr/local/bin/pip3.7 /usr/bin/pip \
     && pip install numpy \
     && pip install pandas \
+    && pip install tensorflow \
     && pip install keras \
     && pip install matplotlib
 WORKDIR /usr/local/python
