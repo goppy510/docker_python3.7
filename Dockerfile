@@ -29,14 +29,14 @@ RUN wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz \
 WORKDIR /tmp/Python37/Python-3.7.0
 RUN ./configure --enable-optimizations \
     && make altinstall \
-    && mkdir /usr/local/python
-    && rm /tmp/Python37/Python-3.7.0.tar.xz
-    && mv /usr/local/python /usr/local/python_old
-    && mv /usr/bin/pip /usr/bin/pip_old
-    && ln -s /usr/local/bin/python3.7 /usr/bin/python
-    && ln -s /usr/local/bin/pip3.7 /usr/bin/pip
-    && pip install numpy
-    && pip install pandas
-    && pip install keras
+    && mkdir /usr/local/python \
+    && rm -r /tmp/Python37/Python-3.7.0.tar.xz \
+    && mv /usr/local/python /usr/local/python_old \
+    && mv /usr/bin/pip /usr/bin/pip_old \
+    && ln -s /usr/local/bin/python3.7 /usr/bin/python \
+    && ln -s /usr/local/bin/pip3.7 /usr/bin/pip \
+    && pip install numpy \
+    && pip install pandas \
+    && pip install keras \
     && pip install matplotlib
 WORKDIR /usr/local/python
