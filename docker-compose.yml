@@ -8,4 +8,3 @@ services:
     tty: true
     volumes:
       - ./src:/usr/local/Python/
-`
