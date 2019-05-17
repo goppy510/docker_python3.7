@@ -14,5 +14,6 @@ then
 fi
 
 docker run --rm -it \
+  -v "$(pwd)":/usr/local/python \
   -w /usr/local/python \
   ${IMAGE_NAME} python "$@"
