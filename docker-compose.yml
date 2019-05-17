@@ -1,0 +1,11 @@
+version: "3"
+services:
+  python:
+    image: python3.7.0-ubuntu
+    restart: always
+    build: .
+    container_name: python3.7.0-ubuntu
+    tty: true
+    volumes:
+      - ./src:/usr/local/Python/
+`
