@@ -31,7 +31,7 @@ RUN ./configure --enable-optimizations \
     && make altinstall \
     && mkdir /usr/local/python \
     && rm -r /tmp/Python37/Python-3.7.0.tar.xz \
-    && mv /usr/local/python /usr/local/python_old \
+    && mv /usr/bin/python /usr/bin/python_old \
     && mv /usr/bin/pip /usr/bin/pip_old \
     && ln -s /usr/local/bin/python3.7 /usr/bin/python \
     && ln -s /usr/local/bin/pip3.7 /usr/bin/pip \
