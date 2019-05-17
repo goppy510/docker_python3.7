@@ -10,7 +10,7 @@ fi
 cd "$(dirname $0)"
 if [ "$1" = "build" ]
 then
-  docker build -i ${IMAGE_NAME}
+  /usr/local/bin/docker-compose build
 fi
 
 docker run --rm -it \
