@@ -11,9 +11,9 @@ cd "$(dirname $0)"
 if [ "$1" = "build" ]
 then
   /usr/local/bin/docker-compose build
+else
+  docker run --rm -it \
+    -v "$(pwd)":/usr/local/python \
+    -w /usr/local/python \
+    ${IMAGE_NAME} python "$@"
 fi
-
-docker run --rm -it \
-  -v "$(pwd)":/usr/local/python \
-  -w /usr/local/python \
-  ${IMAGE_NAME} python "$@"
