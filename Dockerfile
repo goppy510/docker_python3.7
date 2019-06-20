@@ -39,5 +39,7 @@ RUN ./configure --enable-optimizations \
     && pip install pandas \
     && pip install tensorflow \
     && pip install keras \
-    && pip install matplotlib
+    && pip install matplotlib \
+    && pip install argparse \
+    && pip install requests
 WORKDIR /usr/local/python
